@@ -55,7 +55,7 @@ int main(int argc, char* argv[]){
 				string puesto;
 				cin>>puesto;
 				cout<<endl; 
-				personas.push_back(new PersonalAdministrativo(nom_real,num_usu,))
+				personas.push_back(new PersonalAdministrativo(nom_real,num_usu,contrasena,edad,cedula,fecha_nac,clave,puesto));
 			}else if (cuenta==2){
 				cout<<"Ingrese el numero de casos atendidos: ";
 				int casos_a;
@@ -69,6 +69,7 @@ int main(int argc, char* argv[]){
 				int casos_sr;
 				cin>>casos_sr;
 				cout<<endl;
+				personas.push_back(new Investigador(nom_real,num_usu,contrasena,edad,cedula,fecha_nac,casos_a,casos_c,casos_sr));
 			}else if (cuenta==3){
 				cout<<"Ingrese la fecha de ingreso a la organizacion: ";
 				string fecha_i;
@@ -78,7 +79,7 @@ int main(int argc, char* argv[]){
 				string horario;
 				cin>>horario;
 				cout<<endl;
-
+				personas.push_back(new Forense(nom_real,num_usu,contrasena,edad,cedula,fecha_nac,fecha_i,horario));
 			}//end if;
 			break;
 		}
