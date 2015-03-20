@@ -1,9 +1,12 @@
 #ifndef CASOS_H
 #define CASOS_H
+#include "Investigador.h"
+#include "Evidencias.h"
 #include <string>
 #include <vector>
 
-using namespace std;
+using std::string;
+using std::vector;
 
 class Casos{
 	int num_caso;
