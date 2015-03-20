@@ -1,6 +1,6 @@
 #ifndef HOMICIDIO_H
 #define HOMICIDIO_H
-#include "casos.h"
+#include "Casos.h"
 #include <string>
 #using namespace std;
 
@@ -11,7 +11,7 @@ class Homicidio: public Casos{
 	string victima;
 public:
 	Homicidio(string, string, string): Casos(int,string,string,bool);
-	string toString()const; 
+	virtual string toString()const; 
 	string getSospechoso_p()const;
 	void setSospechoso_p(string);
 	string getCulpable()const;
@@ -19,4 +19,5 @@ public:
 	string getVictima()const;
 	void setVictima(string);
 
-}
+};
+#endif 
