@@ -93,7 +93,7 @@ int main(int argc, char* argv[]){
 		cout<<"Desea ver el menu principal de nuevo? (S/N): "<<endl;
 		cin>>resp;
 	}while (!(resp=='s'||resp=='S'||resp=='n'||resp=='N'));
-	
+
 }while (resp=='s'||resp=='S');
 
 int menuPrincipal(){
@@ -133,4 +133,21 @@ int Tipo_Cuenta(){
 	return opcion;
 }
 
+int opcion(){
+	int op;
+	cout<<"Que desea hacer?"<<endl;
+	cout<<"1. Agregar"<<endl;
+	cout<<"2. Modificar"<<endl;
+	cout<<"Ingrese su opcion: ";
+	cin>>op;
+	cout<<endl;
+
+	while (!(op==1||op==2)){
+		cout<<"Opcion no valida."<<endl;
+		cout<<"Ingrese su opcion: ";
+		cin>>op;
+		cout<<endl;
+	}//end while 
+	return op;
+}
 
