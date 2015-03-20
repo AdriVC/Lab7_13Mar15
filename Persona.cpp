@@ -11,53 +11,56 @@ using std::stringstream;
 	string id;
 	string fecha_nacimiento;*/
 
-Persona(string nombre, string usuario, string contrasena, int edad, string id, string fecha_nacimiento)
+Persona::Persona(string nombre, string usuario, string contrasena, int edad, string id, string fecha_nacimiento)
 	:nombre(nombre),usuario(usuario),contrasena(contrasena),edad(edad),id(id),fecha_nacimiento(fecha_nacimiento){
 }
-Persona(const Persona& other)
+Persona::Persona(const Persona& other)
 	:nombre(other.nombre),usuario(other.usuario),contrasena(other.contrasena),edad(other.edad),id(other.id),fecha_nacimiento(other.fecha_nacimiento){
 }
-string toString()const{
+Persona::~Persona(){
+
+}
+string Persona::toString()const{
 	stringstream ss;
-	ss << nombre << "\n\tUsuario: " << usuario << "\n\tEdad: " << edad << "\n\tID: " << id << "\n\tFecha Nacimiento: " << fecha_nacimiento << endl;
+	ss << nombre << "\n\tUsuario: " << usuario << "\n\tEdad: " << edad << "\n\tID: " << id << "\n\tFecha Nacimiento: " << fecha_nacimiento;
 	return ss.str();
 }
-string getNombre()const{
+string Persona::getNombre()const{
 	return nombre;
 }
-string getUsuario()const{
+string Persona::getUsuario()const{
 	return usuario;
 }
-string getContrasena()const{
+string Persona::getContrasena()const{
 	return contrasena;
 }
-int getEdad()const{
+int Persona::getEdad()const{
 	return edad;
 }
-string getId()const{
+string Persona::getId()const{
 	return id;
 }
-string getFecha_nacimiento()const{
+string Persona::getFecha_nacimiento()const{
 	return fecha_nacimiento;
 }
-void setNombre(string nombre)
-	:nombre(nombre){
+void Persona::setNombre(string nombre){
+	this->nombre = nombre;
 }
-void setUsuario(string usuario)
-	:usuario(usuario){
+void Persona::setUsuario(string usuario){
+	this->usuario = usuario;
 }
-void setContrasena(string contrasena)
-	:contrasena(contrasena){
+void Persona::setContrasena(string contrasena){
+	this->contrasena = contrasena;
 }
-void setEdad(int edad)
-	:edad(edad){
+void Persona::setEdad(int edad){
+	this->edad = edad;
 }
-void setId(string id)
-	:id(id){
+void Persona::setId(string id){
+	this->id = id;
 }
-void setFecha_nacimiento(string fecha_nacimiento)
-	:fecha_nacimiento(fecha_nacimiento){
+void Persona::setFecha_nacimiento(string fecha_nacimiento){
+	this->fecha_nacimiento = fecha_nacimiento;
 }
-bool operator==(const Persona& other)const{
-	return usuario == other.usuario && contrasena == other.contrasena;
+bool Persona::logIn(string usuario,string contrasena){
+	return this->usuario == usuario && this->contrasena == contrasena;
 }

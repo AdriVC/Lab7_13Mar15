@@ -14,6 +14,7 @@ class Persona{
 public:
 	Persona(string,string,string,int,string,string);
 	Persona(const Persona&);
+	~Persona();
 	virtual string toString()const;
 	string getNombre()const;
 	string getUsuario()const;
@@ -27,7 +28,7 @@ public:
 	void setEdad(int);
 	void setId(string);
 	void setFecha_nacimiento(string);
-	bool operator==(const Persona&)const;
+	bool logIn(string usuario,string contrasena);
 };
 
 #endif /*PERSONA_H */
