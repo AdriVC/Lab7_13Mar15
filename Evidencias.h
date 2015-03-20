@@ -1,7 +1,8 @@
 #ifndef EVIDENCIAS_H
 #define EVIDENCIAS_H
 #include <string>
-#using namespace std;
+
+using namespace std;
 
 class Evidencias{
 	string nombre;

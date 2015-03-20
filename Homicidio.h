@@ -1,8 +1,8 @@
 #ifndef HOMICIDIO_H
 #define HOMICIDIO_H
-#include "Casos.h"
+#include "casos.h"
 #include <string>
-#using namespace std;
+using namespace std;
 
 class Homicidio: public Casos{
 	vector<string>sospechosos;

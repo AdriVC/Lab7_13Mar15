@@ -3,7 +3,7 @@
 #include <string>
 #include <sstream>
 
-#using namespace std;
+using namespace std;
 
 Homicidio::Homicidio(string sospechoso_p, string culpable, string victima, int num_caso, string hour, string date, bool closed)
 :Casos(num_caso,hour,date,closed), sospechoso_p(sospechoso_p), culpable(culpable), victima(victima){

@@ -8,7 +8,7 @@
 #include "Investigador.h"
 #include "PersonalAdministrativo.h"
 
-#using namespace std;
+using namespace std;
 int menuPrincipal();
 int Tipo_Cuenta();
 
